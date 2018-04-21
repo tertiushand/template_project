@@ -1,0 +1,9 @@
+<table>
+  <tr>
+    <th *ngFor="let header of headers; index as i" (click)="setRowOrder(i)">{{header}}</th>
+  </tr>
+  <tr *ngFor="let row of rows">
+    <td *ngFor="let item of content">{{item[row]}}</td>
+  </tr>
+</table>
+<button (click)="setRowOrder(2)">Sort</button>

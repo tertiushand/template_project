@@ -1,0 +1,10 @@
+<header>
+  <app-header (hamburgerState)="updateMenu($event)"></app-header>
+</header>
+<aside [@navbarState]="menuState">
+  <div class="spacer">&nbsp;</div>
+  <app-sidebar></app-sidebar>
+</aside>
+<div class="main" [@mainState]="menuState">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,39 @@
+@import "../../layout/styles/standard.scss";
+
+#main-nav {
+    list-style: none;
+    padding: 0;
+
+    li {
+        padding: 0.5em 1em 0.5em 2em;
+        border-left: solid 0.2em $sidebar-prim-color;
+    }
+
+    li:hover {
+        color: $sidebar-highlight-color-text;
+        border-left: solid 0.2em $sidebar-highlight-color-button;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        background-color: $sidebar-sec-color;
+        overflow: hidden;
+        
+        li {
+            border-left: solid 0.2em $sidebar-sec-color;
+            padding: 0.25em 1em 0.25em 2em;
+        }
+
+        li:hover {
+            color: $sidebar-highlight-color-text;
+            border-left: solid 0.2em $sidebar-highlight-color-button; 
+        }
+    }
+}
+
+aside {
+    background-color: $sidebar-prim-color;
+    color: #798593;
+
+}

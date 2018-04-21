@@ -1,0 +1,25 @@
+.input {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+label {
+    font-weight: bold;
+}
+
+.errorMessage {
+    color: #F55;
+    font-weight: bold;
+    overflow: hidden;
+    p {
+        margin: 0;
+    }
+    ul {
+        list-style: disc;
+        padding: 0 0 5px 20px;
+        li {
+            padding: 0;
+        }
+    }
+
+}

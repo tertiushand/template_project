@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg834"
+   version="1.1"
+   viewBox="0 0 6.614583 6.6145835"
+   height="25"
+   width="25">
+  <defs
+     id="defs828" />
+  <metadata
+     id="metadata831">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-290.3854)"
+     id="layer1">
+    <g
+       style="fill:#040404;fill-opacity:0.50531918"
+       id="g1405">
+      <rect
+         style="opacity:1;fill:#040404;fill-opacity:0.50531918;stroke:none;stroke-width:0.26499999;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect1379"
+         width="6.0803819"
+         height="1.0640668"
+         x="0.26710072"
+         y="290.75589"
+         ry="0.53203338" />
+      <rect
+         style="opacity:1;fill:#040404;fill-opacity:0.50531918;stroke:none;stroke-width:0.26499999;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect1379-9"
+         width="6.0803819"
+         height="1.0640668"
+         x="0.26710072"
+         y="293.07407"
+         ry="0.53203338" />
+      <rect
+         style="opacity:1;fill:#040404;fill-opacity:0.50531918;stroke:none;stroke-width:0.26499999;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         id="rect1379-6"
+         width="6.0803819"
+         height="1.0640668"
+         x="0.26710072"
+         y="295.39221"
+         ry="0.53203338" />
+    </g>
+  </g>
+</svg>

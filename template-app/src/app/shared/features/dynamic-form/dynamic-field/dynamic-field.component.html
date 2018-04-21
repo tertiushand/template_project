@@ -1,0 +1,29 @@
+<div [formGroup]="form" class="row">
+  <div class="offset-md-2 col-md-3 input">
+      <label [attr.for]="fieldBase.key">{{label}}</label>
+  </div>
+ 
+  <div class="col-md-5 input">
+ 
+    <input *ngIf="fieldBase.controlType === 'textbox' || fieldBase.controlType === 'password'" [formControlName]="fieldBase.key"
+            [id]="fieldBase.key" [type]="fieldBase.controlType" [placeholder]="fieldBase.placeholder" class="form-control">
+ 
+    <select [id]="fieldBase.key" *ngIf="fieldBase.controlType === 'dropdown'" [formControlName]="fieldBase.key">
+      <option *ngFor="let opt of fieldBase.options" [value]="opt.key">{{opt.value}}</option>
+    </select>
+ 
+  </div>
+  <div class="errorMessage offset-md-5 col-md-5" [@validationState]="animationState">
+    <p>{{label}} must meet the following criteria:</p>
+    <ul>
+      <li *ngIf="paternInvalid">Wrong Pattern</li>
+      <li *ngIf="emailInvalid">Must be a valid email address.</li>
+      <li *ngIf="minLengthInvalid">Requires at least {{minLengthInvalid}} characters.</li>
+      <li *ngIf="maxLengthInvalid">Can have no more than {{maxLengthInvalid}} characters.</li>
+      <li *ngIf="minInvalid">Must be at least {{minInvalid}}.</li>
+      <li *ngIf="maxInvalid">Can be no more than {{maxInvalid}}.</li>
+      <li *ngIf="requiredTrueInvalid">Must be true.</li>
+      <li *ngIf="requiredInvalid">Field is required.</li>
+    </ul>
+  </div>
+</div>

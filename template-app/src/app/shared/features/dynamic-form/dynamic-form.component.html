@@ -1,0 +1,15 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+ 
+    <div *ngFor="let field of fields" class="fields">
+      <dynamic-field [fieldBase]="field" [form]="form"></dynamic-field>
+    </div>
+
+    <div class="form-actions">
+      <div class="btn-toolbar offset-md-5 button-space">
+        <button type="submit" [disabled]="!form.valid" class="btn btn-danger">{{buttonText?buttonText:'Submit'}}</button>
+      </div>
+      <p *ngIf="errorMessage">{{errorMessage}}</p>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,18 @@
+//Size of elements
+$sidebar-width: 12em; //This should always match the styling.variable.ts sidebar.width property!
+$header-height: 3em; //This should always match the styling.variable.ts header.height property!
+
+/* COLORS */
+
+//Header colors
+$header-main-color: #FFF;
+$header-sidebar-color: #00bfe9;
+
+//Sidebar colors
+$sidebar-prim-color: #2f3a4c;
+$sidebar-sec-color: #262f3e;
+$sidebar-highlight-color-button: #2196F3;
+$sidebar-highlight-color-text: #FFF;
+
+//Main content window colors
+$main-background: #edeef2;

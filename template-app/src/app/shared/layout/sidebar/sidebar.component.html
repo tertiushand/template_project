@@ -1,0 +1,12 @@
+<aside>
+  <ul id="main-nav">
+    <div *ngFor="let nav of navInfo.config; index as i;">
+      <li (click)="handleNav(nav, i)">
+        {{nav.label}}
+      </li>
+      <ul *ngIf="nav.subnav" [@subnavState]="nav.subnavState">
+        <li *ngFor="let subnav of nav.subnav" (click)="handleNav(subnav)">{{subnav.label}}</li>
+      </ul>
+    </div>
+  </ul>
+</aside>
