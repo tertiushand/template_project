@@ -1,0 +1,13 @@
+us-map /deep/ svg g path:hover, us-map /deep/ svg rect:hover {
+  fill: #0077cc !important;
+}
+
+svg g g:hover {
+  path, rect {
+    fill: #0077cc !important;
+  }
+}
+
+svg g {
+  cursor: pointer;
+}

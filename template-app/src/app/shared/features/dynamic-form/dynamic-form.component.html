@@ -7,7 +7,7 @@
 
     <div class="form-actions">
       <div class="btn-toolbar offset-md-5 button-space">
-        <button type="submit" [disabled]="!form.valid" class="btn btn-danger">{{buttonText?buttonText:'Submit'}}</button>
+        <button type="submit" [disabled]="!form.valid || form.pristine" class="btn btn-danger">{{buttonText?buttonText:'Submit'}}</button>
       </div>
       <p *ngIf="errorMessage">{{errorMessage}}</p>
     </div>

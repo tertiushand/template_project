@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Route } from '@angular/router';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NormalComponent } from './normal/normal.component';
@@ -7,23 +7,39 @@ import { DemoFormsComponent } from './demo-forms/demo-forms.component';
 import { DemoChartsComponent } from './demo-charts/demo-charts.component';
 import { DemoTablesComponent } from './demo-tables/demo-tables.component'
 
-const routes: Routes = [
+export interface MyRoute extends Route {
+  data?: {
+    label?: string;
+    icon?: string;
+  };
+  subnavState?: string;
+}
+
+export const routes: Array<MyRoute> = [
   {
     path: 'dashboard',
     component: DashboardComponent
   },{
-    path: 'normal',
-    component: NormalComponent
-  },{
-    path: 'demo-form',
-    component: DemoFormsComponent
-  },{
-    path: 'demo-charts',
-    component: DemoChartsComponent
-  },{
-    path: 'demo-tables',
-    component: DemoTablesComponent
+    path: 'demos',
+    children: [
+      {
+        path: 'normal',
+        component: NormalComponent,
+        data: {label:"Average Page"}
+      },{
+        path: 'demo-form',
+        component: DemoFormsComponent
+      },{
+        path: 'demo-charts',
+        component: DemoChartsComponent
+      },{
+        path: 'demo-tables',
+        component: DemoTablesComponent
+      }
+    ],
+    subnavState: 'inactive'
   }
+  
 ];
 
 @NgModule({

@@ -1,5 +1,13 @@
 <aside>
   <ul id="main-nav">
+    <div *ngFor="let nav of routes; index as i;">
+      <li (click)="handleRouteNav(nav.component?nav.path:'', i)">
+        {{nav.data?.label?nav.data.label:wordCase(nav.path)}}
+      </li>
+      <ul *ngIf="nav.children" [@subnavState]="nav.subnavState">
+        <li *ngFor="let subnav of nav.children" (click)="handleRouteNav(nav.path+'/'+subnav.path)">{{subnav.data?.label?subnav.data.label:wordCase(subnav.path)}}</li>
+      </ul>
+    </div>
     <div *ngFor="let nav of navInfo.config; index as i;">
       <li (click)="handleNav(nav, i)">
         {{nav.label}}

@@ -1,0 +1,10 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <g *ngFor="let state of stateMapConfig" (click)="passState({'state-abbr': state.abbreviation})">
+            <path [attr.id]="state.abbreviation" [attr.d]="state.path" fill="#003087" stroke="#FFFFFF"></path>
+            <line *ngIf="state.line" fill="none" stroke="#C0C0C0" stroke-width="2" [attr.x1]="state.line.x1" [attr.x2]="state.line.x2" xmlns="http://www.w3.org/2000/svg" [attr.y1]="state.line.y1" [attr.y2]="state.line.y2"></line>
+            <rect *ngIf="state.rect" [attr.height]="state.rect.height" [attr.id]="state.abbreviation+'_1'" [attr.width]="state.rect.width" [attr.x]="state.rect.x" [attr.y]="state.rect.y" fill="#003087" stroke="#FFFFFF"></rect>
+            <text stroke="none" style="cursor: pointer;" text-anchor="middle" [attr.x]="state.position.x" [attr.y]="state.position.y" fill="#FFFFFF"><tspan dy="6.5">{{state.abbreviation}}</tspan></text>
+        </g>
+    </g>
+</svg>

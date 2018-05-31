@@ -1,0 +1,8 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+ 
+    <div *ngFor="let field of fields" class="fields">
+      <wizard-field [fieldBase]="field" [form]="form"></wizard-field>
+    </div>
+  </form>
+</div>

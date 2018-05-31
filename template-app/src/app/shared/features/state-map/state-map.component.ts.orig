@@ -1,0 +1,21 @@
+import { Component, Output, EventEmitter } from '@angular/core';
+
+@Component({
+  selector: 'state-map',
+  templateUrl: './state-map.component.html',
+  styleUrls: ['./state-map.component.scss']
+})
+
+export class StateMapComponent {
+  @Output() onMapClick = new EventEmitter<any>();
+
+<<<<<<< e836709de08dcfbb463b1407a3d0baabd27c5434
+  passState(event: any) {
+    this.onMapClick.emit(event['state-abbr']);
+=======
+  passState(event: string) {
+    this.onMapClick.emit(event);
+>>>>>>> adding state map
+  }
+
+}

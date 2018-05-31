@@ -1,0 +1,42 @@
+<section widget class="widget">
+    <header>
+        <p class="text-muted">{{description}}</p>
+    </header>
+    <div class="widget-body">
+        <div id="wizard" form-wizard class="form-wizard">
+            <ul class="wizard-navigation nav nav-justified nav-pills">
+                <li class="nav-item" *ngFor="let tab of steps; index as i;" (click)="tabStep(i)">
+                    <a class="nav-link" [ngClass]="{'active show': i === currentStepIndex}">
+                        <small>{{i+1}}.</small>
+                        <strong> {{tab.title}}</strong>
+                    </a>
+                </li>
+            </ul>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" [style.width]="progressPercentage+'%'" [attr.aria-valuenow]="progressPercentage" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="tab-content">
+                <ng-template step-host></ng-template>
+                <div class="errorMessage offset-md-5 col-md-5" [@validationState]="animationState">
+                    <p>{{errorMessage}}</p>
+                </div>
+                <div class="description ml mr">
+                    <ul class="pager wizard">
+                        <li class="previous">
+                            <button [disabled]="currentStepIndex === 0" class="btn btn-primary" (click)="backStep()"><i class="fa fa-caret-left"></i> Previous</button>
+                        </li>
+                        <li *ngIf="currentStepIndex !== lastStep" class="next">
+                            <button class="btn btn-primary" (click)="nextClick()" [disabled]="!ready || loading">
+                                <loading *ngIf="loading"></loading>
+                                Next <i class="fa fa-caret-right"></i>
+                            </button>
+                        </li>
+                        <li *ngIf="currentStepIndex === lastStep" class="finish">
+                            <button class="btn btn-success" (click)="finishStep()">Finish <i class="fa fa-check"></i></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

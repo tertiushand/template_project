@@ -1,0 +1,9 @@
+<div>
+    <div *ngFor="let stepValues of wizardValues; index as i;">
+        <div *ngFor="let key of objectKeys(stepValues)" class="row">
+            <div class="offset-md-3 col-md-3">{{label(key)}}:</div>
+            <div class="col-md-3">{{stepValues[key]}}</div>
+        </div>
+    </div>
+
+</div>

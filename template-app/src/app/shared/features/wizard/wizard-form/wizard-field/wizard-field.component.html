@@ -6,9 +6,9 @@
   <div class="col-md-5 input">
  
     <input *ngIf="fieldBase.controlType === 'textbox' || fieldBase.controlType === 'password'" [formControlName]="fieldBase.key"
-            [id]="fieldBase.key" [type]="fieldBase.controlType" [placeholder]="fieldBase.placeholder" [value]="fieldBase.value?fieldBase.value:''" class="form-control">
+            [id]="fieldBase.key" [type]="fieldBase.controlType" [placeholder]="fieldBase.placeholder" (blur)="doOnBlur()" class="form-control">
  
-    <select [id]="fieldBase.key" *ngIf="fieldBase.controlType === 'dropdown'" [formControlName]="fieldBase.key">
+    <select [id]="fieldBase.key" *ngIf="fieldBase.controlType === 'dropdown'" [formControlName]="fieldBase.key" (blur)="doOnBlur()">
       <option *ngFor="let opt of fieldBase.options" [value]="opt.key">{{opt.value}}</option>
     </select>
  

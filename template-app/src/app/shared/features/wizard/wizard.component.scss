@@ -1,0 +1,25 @@
+.progress {
+    margin: 0 1.28% 0.6em 1.28%;
+}
+
+.progress-bar {
+    background-color: #FFF;
+    height: 0.3em;
+}
+
+.errorMessage {
+    color: #F55;
+    font-weight: bold;
+    overflow: hidden;
+    p {
+        margin: 0;
+    }
+    ul {
+        list-style: disc;
+        padding: 0 0 5px 20px;
+        li {
+            padding: 0;
+        }
+    }
+
+}
