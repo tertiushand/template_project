@@ -11,6 +11,6 @@ export class LoadingComponent implements OnInit {
   public fullIconUrl: string;
 
   ngOnInit () {
-    this.fullIconUrl = '../../../assets/svg/loading.svg';
+    this.fullIconUrl = './assets/svg/loading.svg';
   }
 };
